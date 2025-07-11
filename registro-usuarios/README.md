@@ -1,9 +1,11 @@
 # Sistema de Registro de Usuarios
 
 ## Descripción
+
 Este es un proyecto de registro de usuarios desarrollado como parte de la Tarea 3 de Programación Avanzada. La aplicación permite el registro de usuarios con validaciones tanto en el frontend como en el backend, implementando técnicas avanzadas de validación y persistencia de datos.
 
 ## Desarrollado por:
+
 **Carlos Calapucha**
 
 ## Características
@@ -27,8 +29,10 @@ Este es un proyecto de registro de usuarios desarrollado como parte de la Tarea 
 ## Configuración Inicial
 
 ### Base de Datos
+
 1. Instalar MySQL
 2. Crear la base de datos:
+
 ```sql
 CREATE DATABASE registro_usuarios;
 USE registro_usuarios;
@@ -48,18 +52,21 @@ CREATE TABLE usuarios (
 ### Configuración del Proyecto
 
 1. **Clonar el repositorio:**
+
 ```bash
 git clone <url-del-repositorio>
 cd registro-usuarios
 ```
 
 2. **Instalar dependencias:**
+
 ```bash
 npm install
 ```
 
 3. **Configurar variables de entorno:**
-Crear un archivo `.env` en la raíz del proyecto con el siguiente contenido:
+   Crear un archivo `.env` en la raíz del proyecto con el siguiente contenido:
+
 ```
 PORT=3000
 DB_HOST=localhost
@@ -71,11 +78,13 @@ DB_NAME=registro_usuarios
 ## Ejecución del Proyecto
 
 ### Modo Desarrollo
+
 ```bash
 npm run dev
 ```
 
 ### Modo Producción
+
 ```bash
 npm start
 ```
@@ -109,6 +118,7 @@ registro-usuarios/
 ## Validaciones Implementadas
 
 ### Validación Frontend (JavaScript)
+
 - **Validación en tiempo real de campos**
 - **Nombre de usuario**: 3-50 caracteres, solo letras, números y guiones bajos
 - **Email**: Formato válido de correo electrónico
@@ -121,6 +131,7 @@ registro-usuarios/
 - **Verificación de campos únicos**
 
 ### Validación Backend (Express-Validator)
+
 - **Validación del lado del servidor**
 - **Encriptación de contraseñas con bcrypt**
 - **Verificación de usuarios existentes**
@@ -132,21 +143,26 @@ registro-usuarios/
 ## Solución de Problemas
 
 ### Errores Comunes
+
 - **Asegúrate de que MySQL está corriendo**
 - **Verifica las credenciales en el archivo `.env`**
 - **Comprueba que todas las dependencias están instaladas**
 
 ### Conexión a Base de Datos
+
 Si encuentras problemas de conexión:
+
 1. Verifica que MySQL está corriendo
 2. Confirma que las credenciales son correctas (`carlosc` / `car73h`)
 3. Asegúrate de que la base de datos `registro_usuarios` existe
 
 ### Puerto en uso
+
 - Cambiar el puerto en el archivo `.env`
 - Verificar que no haya otro proceso usando el puerto 3000
 
 ### Errores de validación
+
 - Verificar que todos los campos cumplan los requisitos
 - Revisar la consola del navegador para errores JavaScript
 - Consultar los logs del servidor
@@ -177,12 +193,15 @@ curl http://localhost:3000/usuarios
 ```
 
 ## Contribuciones
+
 Las contribuciones son bienvenidas. Por favor, abre un issue o realiza un pull request.
 
 ## Licencia
+
 ISC License
 
 ## Autor
+
 **Carlos Calapucha**
 
 ---
