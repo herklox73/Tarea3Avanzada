@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Registro de Usuario</h1>
+            <form id="registroForm" novalidate>
+                <div class="form-group">
+                    <label for="nombre_usuario">Nombre de Usuario:</label>
+                    <input 
+                        type="text" 
+                        id="nombre_usuario" 
+                        name="nombre_usuario" 
+                        required 
+                        minlength="3" 
+                        maxlength="50"
+                        pattern="^[a-zA-Z0-9_]+$"
+                        placeholder="Ej: carlos_123"
+                    >
+                    <div class="error-message" id="error-nombre_usuario"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        placeholder="usuario@ejemplo.com"
+                    >
+                    <div class="error-message" id="error-email"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contraseña">Contraseña:</label>
+                    <input 
+                        type="password" 
+                        id="contraseña" 
+                        name="contraseña" 
+                        required 
+                        minlength="8"
+                        placeholder="Mínimo 8 caracteres"
+                    >
+                    <div class="password-requirements">
+                        <small>La contraseña debe contener al menos:</small>
+                        <ul>
+                            <li id="length-check">8 caracteres mínimo</li>
+                            <li id="uppercase-check">Una letra mayúscula</li>
+                            <li id="lowercase-check">Una letra minúscula</li>
+                            <li id="number-check">Un número</li>
+                        </ul>
+                    </div>
+                    <div class="error-message" id="error-contraseña"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmar_contraseña">Confirmar Contraseña:</label>
+                    <input 
+                        type="password" 
+                        id="confirmar_contraseña" 
+                        name="confirmar_contraseña" 
+                        required 
+                        placeholder="Repite la contraseña"
+                    >
+                    <div class="error-message" id="error-confirmar_contraseña"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input 
+                        type="number" 
+                        id="edad" 
+                        name="edad" 
+                        required 
+                        min="18" 
+                        max="99"
+                        placeholder="Ej: 25"
+                    >
+                    <div class="error-message" id="error-edad"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción Personal:</label>
+                    <textarea 
+                        id="descripcion" 
+                        name="descripcion" 
+                        maxlength="500" 
+                        rows="4"
+                        placeholder="Cuéntanos un poco sobre ti (máximo 500 caracteres)"
+                    ></textarea>
+                    <div class="char-counter">
+                        <span id="char-count">0</span>/500 caracteres
+                    </div>
+                    <div class="error-message" id="error-descripcion"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Selecciona una categoría</option>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="profesional">Profesional</option>
+                        <option value="empresario">Empresario</option>
+                    </select>
+                    <div class="error-message" id="error-categoria"></div>
+                </div>
+
+                <button type="submit" id="submitBtn">Registrar Usuario</button>
+            </form>
+
+            <div id="resultado" class="resultado"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
